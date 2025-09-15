@@ -197,6 +197,21 @@ export function ModalProvider({ children }: Children) {
           return;
         }
       }
+      if (currentModal === 'setting') {
+        const isInitial =
+          settingData.wordpress_id === 0 ||
+          settingData.coupang_id === 0 ||
+          settingData.gpt_id === 0 ||
+          settingData.gpt_topic_id === 0 ||
+          settingData.interval_days === 0 ||
+          settingData.interval_hours === 0 ||
+          settingData.interval_minutes === 0;
+
+        if (isInitial) {
+          alert('모든 값을 선택/입력해야 합니다.');
+          return;
+        }
+      }
       const optimisticUpdate = async () => {
         if (currentModal === 'setting') {
           const prevData = settingData;
