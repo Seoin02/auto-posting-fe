@@ -1,0 +1,18 @@
+{
+  "ignorePaths": [
+    "node_modules",
+    ".next",
+    "*.json",
+    "*.html",
+    "*.css",
+    "*.md",
+    "*.svg",
+    "**/fixture.ts",
+    "**/fixture/*",
+    "*.config.ts",
+    "**/mixpanel/*",
+    "src/shared/constants/event.ts"
+  ],
+  "files": ["src/**/*.tsx", "src/**/*.ts"],
+  "words": ["coupang", "modaltype"]
+}
